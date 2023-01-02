@@ -9,16 +9,14 @@ export const Layout = () => {
     <Container>    
       <Header>
         <nav>
-          <Link to='/' end>
-          Home
-          </Link>
+          <Link to='/' end> Home </Link>
           <Link to="/movies">Movies</Link>
         </nav>
       </Header>
-      <Suspense fallback={null}>
-       <Outlet/>
-      </Suspense>
+        <Suspense fallback={null}>
+          <Outlet/>
+        </Suspense>
       
-      </Container> 
+    </Container> 
     </>
 }
