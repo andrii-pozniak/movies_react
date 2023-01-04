@@ -7,7 +7,7 @@ padding: ${p => p.theme.space[4]}px
 
 export const Header = styled.div `
 display: flex;
-justify-content: start;
+justify-content: space-between;
 padding: ${p => p.theme.space[4]}px;
 
  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 

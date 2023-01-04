@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { Box, Button } from "components/Form/Form.Style";
+import styled from 'styled-components';
+import { StyleButton, StyleForm } from "components/Form/Form.Style";
+
+export const StyleInput  = styled.input`
+display: flex;
+padding: ${p => p.theme.space[3]}px;
+margin-bottom: ${p => p.theme.space[3]}px;
+border-radius: ${ p => p.theme.radii.normal};
+font-size: ${ p => p.theme.fontSizes.m};
+`;
 
 
 export const Form = ({onSubmit}) => {
@@ -24,9 +33,9 @@ export const Form = ({onSubmit}) => {
         onSubmit(moviesName)
         // console.log('onSubmit', moviesName)
     }
-    return <form onSubmit={handleSubmit}>
-    <Box type="text" placeholder="Search movies"   value={moviesName}
+    return <StyleForm onSubmit={handleSubmit}>
+    <StyleInput type="text" placeholder="Search movies"   value={moviesName}
     onChange={handleMoviesNameChange}/>
-    <Button type="submit" >Search</Button>
+    <StyleButton type="submit" >Search</StyleButton>
    
-</form>}
+</StyleForm>}
