@@ -4,11 +4,13 @@ import { useState, useEffect, Suspense } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import {  Link, Outlet } from "react-router-dom";
 import { GrLinkPrevious } from "react-icons/gr"
+import { StyleButton } from "components/Form/Form.Style"
+
 
 import { Section, 
     Card, Details, 
     Title, Page, GenresName, 
-    BackButton, Item } from "components/MovieDetails/MovieDetails.Style";
+   Item } from "components/MovieDetails/MovieDetails.Style";
 
 const MOVEID = 'https://api.themoviedb.org/3/movie'
 const KEY = '?api_key=c45f6d5d61e66845ac8342820cc294e1'
@@ -40,7 +42,7 @@ useEffect(() => {
     
     return <Section>
         <div>
-         <Link to={backLinkHref} ><BackButton><GrLinkPrevious/> Go back</BackButton></Link>
+         <Link to={backLinkHref} ><StyleButton><GrLinkPrevious/> Go back</StyleButton></Link>
           <Card>
          <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} width='280' alt={title}/>
         

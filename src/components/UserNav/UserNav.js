@@ -13,4 +13,4 @@ export const UserNav = () => {
             Log Out
         </StyleButton>
     </StyleContainer>
-}
+} 

@@ -1,19 +1,34 @@
 import { useState } from "react";
+// import styled from 'styled-components';
 import styled from 'styled-components';
-import { StyleButton, StyleForm } from "components/Form/Form.Style";
 
-export const StyleInput  = styled.input`
+import { StyleButton, StyleInput } from "components/Form/Form.Style";
+
+// export const StyleInput  = styled.input`
+// display: flex;
+// padding: ${p => p.theme.space[3]}px;
+// outline: 0;
+// border: solid 1px #f2f2f2;
+// margin-bottom: ${p => p.theme.space[4]}px;
+// border-radius: ${ p => p.theme.radii.large};
+
+// font-size: ${ p => p.theme.fontSizes.m};
+// font-weight: ${p => p.theme.fontWeights.normal};
+
+// box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+//  0px 3px 3px rgba(0, 0, 0, 0.14),
+//  0px 3px 3px rgba(0, 0, 0, 0.2);
+// `;
+export const StyleForm  = styled.form`
 display: flex;
-padding: ${p => p.theme.space[3]}px;
-margin-bottom: ${p => p.theme.space[3]}px;
-border-radius: ${ p => p.theme.radii.normal};
-font-size: ${ p => p.theme.fontSizes.m};
+align-items: baseline;
+padding:${p => p.theme.space[3]}px;
+gap: 30px;
+margin-bottom: 5px;
 `;
 
-
 export const Form = ({onSubmit}) => {
-    const [moviesName, setMoviesName ] = useState('');
-    
+    const [moviesName, setMoviesName ] = useState('');    
 
     const handleMoviesNameChange = evt => {
      

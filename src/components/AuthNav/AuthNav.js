@@ -1,19 +1,18 @@
 import { NavLink } from 'react-router-dom';
-import { StyleButton, StyleText, StyleContainer } from "components/Form/Form.Style"
+import { StyleButton } from "components/Form/Form.Style"
+import {  Link} from "pages/Layout.Style"
 
 
 export const AuthNav = () => {
 
-    return <StyleContainer>
-        <NavLink to="/register">
-            <StyleText>
-            Register
-            </StyleText>        
-        </NavLink>
+    return <div>
+        <Link to="/register">           
+            Register                   
+        </Link>
         <NavLink to="/login">
             <StyleButton type='button'>
                 Log In
             </StyleButton>
         </NavLink>
-    </StyleContainer>
+    </div>
 }

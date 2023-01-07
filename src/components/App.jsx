@@ -9,6 +9,7 @@ import { RestrictedRoute } from 'components/RestrictedRoute';
 import { useDispatch } from "react-redux";
 import { useAuth } from 'hooks';
 import { refreshUser } from 'Redux/Auth/operations';
+import { PrivateRoute } from "components/PrivateRoute";
 
 
 // import { MovieDetails } from "components/MovieDetails/MovieDetails";
@@ -43,7 +44,7 @@ export const App = () => {
          />}/>
         <Route path="/login" element={<RestrictedRoute redirectTo="/" component={<LoginPage />} />}/>
           <Route path="/movies" element={<Movies/>}/>
-          <Route path="movies/:moviesId" element={<MovieDetails/>}>
+          <Route path="movies/:moviesId" element={<PrivateRoute redirectTo='/login' component={<MovieDetails/>}/> }>
            <Route path="review" element={<Review/>}/>
             <Route path="cast" element={<Cast/>}/>
             </Route>         

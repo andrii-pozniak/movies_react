@@ -5,6 +5,7 @@ import { useState, useEffect, Suspense } from "react";
 import { Form } from "components/Form/Form";
 import { Link, Outlet, useLocation, useSearchParams } from "react-router-dom";
 import { Ul, Li, Page } from "../Home/Home.Style";
+
 const NAME_URL = 'https://api.themoviedb.org/3/search/movie?api_key=c45f6d5d61e66845ac8342820cc294e1'
 
  const Movies = () => {
@@ -38,8 +39,8 @@ const NAME_URL = 'https://api.themoviedb.org/3/search/movie?api_key=c45f6d5d61e6
 
   }, [nameMovie])
 
-  return <div>
-    <Form onSubmit={handleFormSubmit} />
+  return <div>  
+     <Form onSubmit={handleFormSubmit} />      
     {movies && <div> <Ul>
       {movies.map(({ id, title, poster_path }) =>
         <Li key={id}>
