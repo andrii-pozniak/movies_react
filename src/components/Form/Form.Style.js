@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import img from "components/Images/movie.jpg";
+import img from "components/Images/img.jpg";
 
 export const StyleForm  = styled.form`
 padding:${p => p.theme.space[5]}px;
@@ -9,7 +9,8 @@ width: 100%;
 height: 100vh;
 margin-top: 2px;
 background-image: url(${img});
-background-size: 100% 100vh;
+background-size: 100%, contain;
+background-position: top bottom;;
 `;
 export const StyleLabel  = styled.label`
 display: flex;
