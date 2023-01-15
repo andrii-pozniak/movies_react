@@ -11,16 +11,16 @@ import { store } from './Redux/Movies/store';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
+
   <React.StrictMode>
     <BrowserRouter basename='/movies_react'>
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <App />
         </Provider>
-      </ThemeProvider>   
-    </BrowserRouter>    
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
- 
-  
+
+
 );

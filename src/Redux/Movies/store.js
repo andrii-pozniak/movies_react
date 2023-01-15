@@ -10,8 +10,6 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import { moviesReducer } from 'Redux/Movies/moviesSlice';
-
 import { authReducer } from 'Redux/Auth/slice';
 
 const middleware = [
@@ -33,7 +31,7 @@ export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     // movies: moviesReducer,
-   
+
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',

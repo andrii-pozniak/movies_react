@@ -7,7 +7,7 @@ import { useAuth } from 'hooks';
 export const UserNav = () => {
     const dispatch = useDispatch();
     const { user } = useAuth();
-    return    <StyleContainer>
+    return <StyleContainer>
         <StyleText >Welcome, {user.name}</StyleText>
         <StyleButton type="button" onClick={() => dispatch(logOut())}>
             Log Out

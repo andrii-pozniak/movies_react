@@ -8,7 +8,7 @@ import { Ul, Li, Page } from "../Home/Home.Style";
 
 const NAME_URL = 'https://api.themoviedb.org/3/search/movie?api_key=c45f6d5d61e66845ac8342820cc294e1'
 
- const Movies = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const location = useLocation()
   const [searchParams, setSearchParams] = useSearchParams()
@@ -39,23 +39,23 @@ const NAME_URL = 'https://api.themoviedb.org/3/search/movie?api_key=c45f6d5d61e6
 
   }, [nameMovie])
 
-  return <div>  
-     <Form onSubmit={handleFormSubmit} />      
+  return <div>
+    <Form onSubmit={handleFormSubmit} />
     {movies && <div> <Ul>
       {movies.map(({ id, title, poster_path }) =>
         <Li key={id}>
           <Link to={`${id}`} state={{ from: location }}>
             {poster_path ? <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} width='200' height='300' alt={title} /> :
-            <img src={`https://thefittingsource.com/wp-content/uploads/2017/12/temp-inventory-landing.jpg`} width='200' height='250' alt={title} />}
+              <img src={`https://thefittingsource.com/wp-content/uploads/2017/12/temp-inventory-landing.jpg`} width='200' height='250' alt={title} />}
 
             <Page><b>{title}</b></Page> </Link>
         </Li>
       )} </Ul>
     </div>}
     <Suspense>
-     <Outlet />
+      <Outlet />
     </Suspense>
-    
+
   </div>
 }
 export default Movies;
@@ -63,5 +63,5 @@ export default Movies;
 Movies.propTypes = {
   data: PropTypes.array,
   results: PropTypes.arrayOf(PropTypes.object),
-  
-  }
+
+}

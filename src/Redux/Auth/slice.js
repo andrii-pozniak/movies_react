@@ -23,12 +23,12 @@ const authSlice = createSlice({
       // console.log(state)
       // console.log(action.payload.user)
       state.user = action.payload.user;
-      state.token = action.payload.token;     
+      state.token = action.payload.token;
       state.isLoggedIn = true;
     },
     [logOut.fulfilled](state) {
       state.user = { name: null, email: null };
-      
+
       state.token = null;
       // console.log(state.isLoggedIn)
       state.isLoggedIn = false;
@@ -40,7 +40,7 @@ const authSlice = createSlice({
       console.log(action)
       console.log(state)
       state.user = action.payload;
-      
+
       state.isLoggedIn = true;
       state.isRefreshing = false;
     },
