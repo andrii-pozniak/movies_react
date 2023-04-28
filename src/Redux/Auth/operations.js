@@ -1,5 +1,5 @@
-import axios from "axios";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
@@ -7,26 +7,20 @@ const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
-// Utility to remove JWT
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
-/*
- * POST @ /users/signup
- * body: { name, email, password }
- */
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
-    console.log(credentials)
+    console.log(credentials);
 
     try {
       const res = await axios.post('/users/signup', credentials);
-      // After successful registration, add the token to the HTTP header
-      console.log(res)
+      console.log(res);
       setAuthHeader(res.data.token);
-      console.log(res.data.token)
+      console.log(res.data.token);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -79,7 +73,7 @@ export const refreshUser = createAsyncThunk(
     const state = thunkAPI.getState();
     // console.log(state)
     const persistedToken = state.auth.token;
-    console.log(persistedToken)
+    console.log(persistedToken);
     if (persistedToken === null) {
       // If there is no token, exit without performing any request
       return thunkAPI.rejectWithValue('Unable to fetch user');
