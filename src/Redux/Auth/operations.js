@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://movies-react-brfu.onrender.com/';
+axios.defaults.baseURL = 'https://rest-api-a3zm.onrender.com/api/';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -17,7 +17,7 @@ export const register = createAsyncThunk(
     console.log(credentials);
 
     try {
-      const res = await axios.post('/users/signup', credentials);
+      const res = await axios.post('users/signup', credentials);
       console.log(res);
       setAuthHeader(res.data.token);
       console.log(res.data.token);
