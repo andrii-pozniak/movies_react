@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Ul = styled.ul`
   display: grid;
   position: absolute;
-  top: 110px;
-  left: ${p => p.theme.space[7]}px;
+  top: 118px;
+  left: ${p => p.theme.space[6]}px;
   max-width: calc(100vw - 48px);
   grid-template-columns: repeat(auto-fit, 200px);
-  grid-gap: ${p => p.theme.space[4]}px;
+  grid-gap: ${p => p.theme.space[3]}px;
   margin-top: ${p => p.theme.space[1]}px;
   margin-bottom: ${p => p.theme.space[1]}px;
   padding: ${p => p.theme.space[1]}px;
