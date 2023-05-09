@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { 
-    StyleButton,
-    StyleInput 
-} from 'components/Form/Form.Style';
+import { StyleButton, StyleInput } from 'components/Form/Form.Style';
 
 export const StyleForm = styled.form`
   display: flex;
