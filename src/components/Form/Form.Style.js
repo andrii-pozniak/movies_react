@@ -38,18 +38,21 @@ export const StyleInput = styled.input`
 
 export const StyleButton = styled.button`
   padding: ${p => p.theme.space[3]}px;
-  font-family: ${p => p.theme.fontWeights.body};
+  font-family: ${p => p.theme.fonts.body};
   font-size: ${p => p.theme.fontSizes.m};
   font-weight: ${p => p.theme.fontWeights.middle};
-  color: ${p => p.theme.colors.text};
-  background-color: ${p => p.theme.colors.white};
-  border: solid 1px #f2f2f2;
+  color: ${p => p.theme.colors.black};
+  background-color: transparent;
+  border: none;
   border-radius: ${p => p.theme.radii.large};
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 3px 3px rgba(0, 0, 0, 0.14),
-    0px 3px 3px rgba(0, 0, 0, 0.2);
-  :focus:hover {
+  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 3px 3px rgba(0, 0, 0, 0.14),
+    0px 3px 3px rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+  &:hover {
     background-color: ${p => p.theme.colors.primary};
     color: ${p => p.theme.colors.white};
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 3px 3px rgba(0, 0, 0, 0.14),
+    0px 3px 3px rgba(0, 0, 0, 0.2);
   }
 `;
 export const StyleText = styled.p`

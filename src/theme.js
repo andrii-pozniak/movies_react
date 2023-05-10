@@ -11,7 +11,7 @@ export const theme = {
   },
   space: [0, 2, 4, 8, 16, 32, 48, 64, 128, 256],
   fonts: {
-    body: 'system-ui, sans-serif',
+    body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, elvetica Neue, sans-serif',
     heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },

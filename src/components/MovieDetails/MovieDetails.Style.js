@@ -39,7 +39,6 @@ export const BackButton = styled.div`
   align-items: center;
   justify-content: space-around;
   width: ${p => p.theme.space[8]}px;
-  /* height: ${p => p.theme.space[5]}px; */
   padding: ${p => p.theme.space[2]}px;
   border: ${p => p.theme.borders.normal};
   background-color: ${p => p.theme.colors.background};
