@@ -30,8 +30,7 @@ export const StyleInput = styled.input`
   border-radius: ${p => p.theme.radii.large};
 
   font-size: ${p => p.theme.fontSizes.m};
-  font-weight: ${p => p.theme.fontWeights.normal};
-
+  font-weight: ${p => p.theme.fontWeights.normal}
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 3px 3px rgba(0, 0, 0, 0.14),
     0px 3px 3px rgba(0, 0, 0, 0.2);
 `;
@@ -45,8 +44,7 @@ export const StyleButton = styled.button`
   background-color: transparent;
   border: none;
   border-radius: ${p => p.theme.radii.large};
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 3px 3px rgba(0, 0, 0, 0.14),
-    0px 3px 3px rgba(0, 0, 0, 0.2); */
+  
   cursor: pointer;
   &:hover {
     background-color: ${p => p.theme.colors.primary};
